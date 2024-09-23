@@ -3,8 +3,9 @@ import Layout from "../components/Layout"
 const ContactPage = () => {
   return (
     <>
-    <Layout/>
+    <Layout>
     <h1>Página de contacto</h1>
+    </Layout>
     </>
   )
 }
