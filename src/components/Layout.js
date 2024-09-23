@@ -4,8 +4,11 @@ import { Link } from "gatsby"
 const Layout = () => {
   return (
     <>
-    <a><Link to="/">Inicio</Link></a>
-    <a><Link to="/contacto">Contacto</Link></a>
+    <ul>
+      <li><Link to="/">Inicio</Link></li>
+      <li><Link to="/contacto">Contacto</Link></li>
+    </ul>
+   
     </>
   )
 }
