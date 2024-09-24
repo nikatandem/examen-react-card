@@ -4,7 +4,7 @@ const ContactPage = () => {
   return (
     <>
     <Layout/>
-    <h1>Página de contacto</h1>
+    <h1 className="titulo-principal">Página de contacto</h1>
  
     </>
   )

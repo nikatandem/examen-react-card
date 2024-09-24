@@ -1,0 +1,56 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 24px; 
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e5f6ff;
+    border: solid 2px #dddddd;
+    border-radius: 8px;
+    max-width: 400px;
+    min-width: 300px;
+    padding: 16px;
+    margin: 24px; 
+}
+
+.titulo-secundario {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.texto-secundario {
+    font-family: Monserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px; 
+}
+
+.boton-primario {
+    background-color: #007acc;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    height: 48px;
+    width: 150px;
+}
+.boton-primario:hover {
+    background-color: #005fa3; 
+}
+.texto-btn{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.boton-secundario {
+    height: 48px;
+    width: 150px;
+    background-color: #ffffff;
+    color: #007acc;
+    border: solid 2px #007acc;
+    border-radius: 8px;
+}
+.boton-secundario:hover {
+    background-color: #e5f6ff;
+}
