@@ -1,23 +1,26 @@
 .card-container {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 24px; 
-    justify-content: space-around;
-    align-items: center;
+    display:flex;                 
+    flex-wrap: wrap;              
+    gap: 12px;
+    text-align: center;
+}
+
+.card{
     background-color: #e5f6ff;
     border: solid 2px #dddddd;
     border-radius: 8px;
     max-width: 400px;
     min-width: 300px;
     padding: 16px;
-    margin: 24px; 
+    margin: 24px;
+ 
 }
-
 .titulo-secundario {
     font-family: Roboto, sans-serif;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 8px;
+    text-align: center; 
 }
 
 .texto-secundario {
@@ -25,6 +28,7 @@
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 16px; 
+    text-align: left; 
 }
 
 .boton-primario {
@@ -34,23 +38,26 @@
     border-radius: 8px;
     height: 48px;
     width: 150px;
+    margin-top: auto; 
 }
 .boton-primario:hover {
     background-color: #005fa3; 
 }
-.texto-btn{
+
+.texto-btn {
     color: #ffffff;
     text-decoration: none;
 }
 
-.boton-secundario {
-    height: 48px;
-    width: 150px;
-    background-color: #ffffff;
-    color: #007acc;
-    border: solid 2px #007acc;
-    border-radius: 8px;
+.card-image-container {
+    width: 100%;
+    height: 180px; 
+    background-color: white;
+
 }
-.boton-secundario:hover {
-    background-color: #e5f6ff;
+
+.card-image {
+    max-width: 200%;
+    max-height: 100%;
+
 }

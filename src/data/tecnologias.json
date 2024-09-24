@@ -3,14 +3,14 @@
       "id": 1,
       "title": "Aprende React",
       "description": "React es una biblioteca de JavaScript para construir interfaces de usuario.",
-      "image": "react.jpg",
+      "image": "react.png",
       "link": "https://es.react.dev/"
     },
     {
       "id": 2,
       "title": "Explora Gatsby",
       "description": "Gatsby es un framework basado en React que permite crear sitios web rápidos y modernos.",
-      "image": "gatsby.png",
+      "image": "gatsby.jpg",
       "link": "https://www.gatsbyjs.com/"
     },
     {

@@ -8,22 +8,24 @@ module.exports = {
     title: `Examen react card`,
     description:`Manejando react utilizando el framework gatsby`,
   },
-    plugins: [
-
-
-   
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/src/data/`,
-        },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/`,
+        name: `data`, 
       },
-      
-      `gatsby-plugin-sharp`,
-      `gatsby-plugin-image`,
-      `gatsby-transformer-sharp`,
-      `gatsby-transformer-json`,
-
-
-    ],
-  }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images/`,
+        name: `images`, 
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+  ],
+};

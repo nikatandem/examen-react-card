@@ -1,32 +1,72 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import Card from "../components/card/card"
-import reactLogo from '../images/react.jpg'
-import gatsbyLogo from '../images/gatsby.png'
+import {graphql } from "gatsby";
+import "../components/card/card.css"
 
-const IndexPage = () => {
-  return (
+const IndexPage = ({data}) => {
+ const imageMap = {};  
+ data.allFile.nodes.forEach((file) => {
+  imageMap[file.relativePath] = file.childImageSharp.gatsbyImageData;
+});
+ return (
+   
     <>
     <Layout/>
+    <div className="content">
     <h1 className="titulo-principal">Página de inicio</h1>
-  <Card
-  title={"Aprende React"}
-  description={"React es una biblioteca de JavaScript para construir interfaces de usuario"}
-  image={reactLogo}
-  link={"https://es.react.dev/"}
-  
-  ></Card>
+      <div className="card-container">
+        {data.allTecnologiasJson.edges.map(({ node }) => {
+          const image = imageMap[node.image]; 
 
-<Card
-  title={"Explora Gatsby"}
-  description={"Gatsby es un framework basado en React que permite crear sitios web rápidos y modernos."}
-  image={gatsbyLogo}
-  link={"https://www.gatsbyjs.com/"}
-  
-  ></Card>
+          return (
+            
+            <Card
+              key={node.id}
+              title={node.title}
+              description={node.description}
+              image={image}
+              link={node.link}
+            />
+            
+          );
+        })}
+      </div>
+      </div>
+      
     </>
-  )
-}
+  );
+};
+
+export const query = graphql`
+  query MyQuery {
+    allTecnologiasJson {
+      edges {
+        node {
+          id
+          title
+          description
+          link
+          image  # El campo "image" es el nombre del archivo de imagen
+        }
+      }
+    }
+    allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+      nodes {
+        relativePath
+        childImageSharp {
+          gatsbyImageData(
+          placeholder: DOMINANT_COLOR
+          formats: [AUTO, WEBP, AVIF]
+          width: 300
+          height: 300
+          backgroundColor: "white" 
+          )
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage
 
